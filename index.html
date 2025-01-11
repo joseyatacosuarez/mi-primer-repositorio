@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inicio de Sesión - Netflix Simulado</title>
+  <style>
+    body {
+      background-color: #141414;
+      font-family: Arial, sans-serif;
+      color: white;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .login-container {
+      background-color: rgba(0, 0, 0, 0.75);
+      padding: 40px;
+      width: 300px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+    }
+
+    .login-container h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    input[type="email"], input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 4px;
+    }
+
+    .login-button {
+      width: 100%;
+      padding: 10px;
+      background-color: #e50914;
+      border: none;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 10px;
+      border-radius: 4px;
+    }
+
+    .login-button:hover {
+      background-color: #f40612;
+    }
+
+    .help-text {
+      margin-top: 15px;
+      font-size: 0.9em;
+      text-align: center;
+    }
+
+    .help-text a {
+      color: #757575;
+      text-decoration: none;
+    }
+
+    .help-text a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <h1>Iniciar Sesión</h1>
+    <form action="/login" method="POST">
+      <input type="email" placeholder="Correo electrónico" required>
+      <input type="password" placeholder="Contraseña" required>
+      <button class="login-button" type="submit">Iniciar Sesión</button>
+    </form>
+    <div class="help-text">
+      <p>¿Nuevo en Netflix? <a href="#">Suscríbete ahora</a></p>
+      <p><a href="#">¿Necesitas ayuda?</a></p>
+    </div>
+  </div>
+</body>
+</html>
