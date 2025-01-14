@@ -3,106 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Streaming Platform Homepage Example</title>
+    <title>HBO Max Style Login Example</title>
     <style>
         body {
             font-family: 'Arial', sans-serif;
-            margin: 0;
-            background-color: #121212;
-            color: white;
-        }
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px;
             background-color: #1F1F1F;
-        }
-        .navbar a {
-            text-decoration: none;
             color: white;
-            margin: 0 15px;
-            font-weight: bold;
-        }
-        .hero-banner {
-            background-image: url('https://via.placeholder.com/1200x400');
-            background-size: cover;
-            background-position: center;
-            height: 400px;
             display: flex;
             justify-content: center;
             align-items: center;
-            text-align: center;
+            height: 100vh;
+            margin: 0;
         }
-        .hero-banner h1 {
-            font-size: 50px;
-            color: #FFF;
-            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
-        }
-        .content-section {
-            padding: 20px;
-        }
-        .content-section h2 {
-            margin-top: 0;
-        }
-        .grid-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 15px;
-        }
-        .grid-item {
+        .login-container {
             background-color: #292929;
-            padding: 10px;
+            padding: 40px;
+            border-radius: 10px;
+            width: 350px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
             text-align: center;
-            border-radius: 8px;
         }
-        .grid-item img {
+        .login-container h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #E6E6E6;
+        }
+        .login-container input[type="email"],
+        .login-container input[type="password"] {
             width: 100%;
-            border-radius: 8px;
+            padding: 12px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            background-color: #3A3A3A;
+            color: white;
+            font-size: 16px;
+        }
+        .login-container button {
+            width: 100%;
+            padding: 12px;
+            background-color: #6200EE;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .login-container button:hover {
+            background-color: #4500b5;
+        }
+        .login-container a {
+            display: block;
+            margin-top: 15px;
+            color: #A0A0A0;
+            text-decoration: none;
+        }
+        .login-container a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
 
-    <!-- Navigation Bar -->
-    <div class="navbar">
-        <div class="logo">
-            <a href="#">Streaming Platform</a>
-        </div>
-        <div class="menu">
-            <a href="#">Home</a>
-            <a href="#">Series</a>
-            <a href="#">Movies</a>
-            <a href="#">My List</a>
-        </div>
-    </div>
-
-    <!-- Hero Banner -->
-    <div class="hero-banner">
-        <h1>Watch Your Favorite Shows Anytime</h1>
-    </div>
-
-    <!-- Content Sections -->
-    <div class="content-section">
-        <h2>Popular Now</h2>
-        <div class="grid-container">
-            <div class="grid-item">
-                <img src="https://via.placeholder.com/150" alt="Show 1">
-                <p>Show Title 1</p>
-            </div>
-            <div class="grid-item">
-                <img src="https://via.placeholder.com/150" alt="Show 2">
-                <p>Show Title 2</p>
-            </div>
-            <div class="grid-item">
-                <img src="https://via.placeholder.com/150" alt="Show 3">
-                <p>Show Title 3</p>
-            </div>
-            <div class="grid-item">
-                <img src="https://via.placeholder.com/150" alt="Show 4">
-                <p>Show Title 4</p>
-            </div>
-        </div>
+    <div class="login-container">
+        <h2>Sign In to HBO Max</h2>
+        <form>
+            <input type="email" placeholder="Email or Username" required><br>
+            <input type="password" placeholder="Password" required><br>
+            <button type="submit">Sign In</button>
+        </form>
+        <a href="#">Forgot Password?</a>
+        <a href="#">Create an Account</a>
     </div>
 
 </body>
