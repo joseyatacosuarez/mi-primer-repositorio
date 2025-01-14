@@ -1,115 +1,109 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Netflix - Pantalla de Bienvenida</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Arial', sans-serif;
-      background-image: url('https://via.placeholder.com/1600x900'); /* Imagen de fondo */
-      background-size: cover;
-      background-position: center;
-      color: white;
-    }
-
-    .overlay {
-      background-color: rgba(0, 0, 0, 0.6);
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-    }
-
-    .header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px 50px;
-    }
-
-    .logo {
-      height: 30px;
-    }
-
-    .sign-in-button {
-      background-color: #e50914;
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      font-size: 16px;
-      cursor: pointer;
-      border-radius: 2px;
-    }
-
-    .content {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      text-align: center;
-      max-width: 700px;
-    }
-
-    .content h1 {
-      font-size: 50px;
-      margin-bottom: 20px;
-    }
-
-    .content p {
-      font-size: 18px;
-      margin-bottom: 30px;
-    }
-
-    .email-form {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-
-    .email-form input[type="email"] {
-      padding: 10px;
-      width: 70%;
-      max-width: 400px;
-      border: none;
-      border-radius: 2px;
-    }
-
-    .email-form button {
-      background-color: #e50914;
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      font-size: 16px;
-      cursor: pointer;
-      border-radius: 2px;
-      margin-left: 10px;
-    }
-
-    .email-form button:hover {
-      background-color: #f40612;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Streaming Platform Homepage Example</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            background-color: #121212;
+            color: white;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #1F1F1F;
+        }
+        .navbar a {
+            text-decoration: none;
+            color: white;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        .hero-banner {
+            background-image: url('https://via.placeholder.com/1200x400');
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .hero-banner h1 {
+            font-size: 50px;
+            color: #FFF;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+        }
+        .content-section {
+            padding: 20px;
+        }
+        .content-section h2 {
+            margin-top: 0;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+        }
+        .grid-item {
+            background-color: #292929;
+            padding: 10px;
+            text-align: center;
+            border-radius: 8px;
+        }
+        .grid-item img {
+            width: 100%;
+            border-radius: 8px;
+        }
+    </style>
 </head>
 <body>
-  <div class="overlay">
-    <div class="header">
-      <img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="Netflix Logo">
-      <button class="sign-in-button">Iniciar Sesión</button>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <div class="logo">
+            <a href="#">Streaming Platform</a>
+        </div>
+        <div class="menu">
+            <a href="#">Home</a>
+            <a href="#">Series</a>
+            <a href="#">Movies</a>
+            <a href="#">My List</a>
+        </div>
     </div>
 
-    <div class="content">
-      <h1>Películas, series y más. Sin límites.</h1>
-      <p>Disfruta donde quieras. Cancela en cualquier momento.</p>
-      <p>¿Quieres ver algo ya? Ingresa tu correo para crear o reiniciar tu membresía.</p>
-
-      <form class="email-form">
-        <input type="email" placeholder="Correo electrónico" required>
-        <button type="submit">Comenzar</button>
-      </form>
+    <!-- Hero Banner -->
+    <div class="hero-banner">
+        <h1>Watch Your Favorite Shows Anytime</h1>
     </div>
-  </div>
+
+    <!-- Content Sections -->
+    <div class="content-section">
+        <h2>Popular Now</h2>
+        <div class="grid-container">
+            <div class="grid-item">
+                <img src="https://via.placeholder.com/150" alt="Show 1">
+                <p>Show Title 1</p>
+            </div>
+            <div class="grid-item">
+                <img src="https://via.placeholder.com/150" alt="Show 2">
+                <p>Show Title 2</p>
+            </div>
+            <div class="grid-item">
+                <img src="https://via.placeholder.com/150" alt="Show 3">
+                <p>Show Title 3</p>
+            </div>
+            <div class="grid-item">
+                <img src="https://via.placeholder.com/150" alt="Show 4">
+                <p>Show Title 4</p>
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>
